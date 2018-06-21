@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('../partials/scripts'); -%>
+  </head>
+  <body>
+    <header>
+      <%- include('../partials/header'); -%>
+    </header>
+    <main>
+      <br>
+        <div class="container">
+          <div class="notification">
+              <h1><%= user.name %>, This is your <%= title %>.</h1>
+              <p>You can View your Feed here...</p>
+      </div>
+    </main>
+    <footer class="container">
+        <%- include('../partials/footer'); -%>
+    </footer>
+  </body>
+</html>

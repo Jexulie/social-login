@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('../partials/scripts'); -%>
+  </head>
+  <body>
+    <header>
+      <%- include('../partials/header'); -%>
+    </header>
+    <main>
+      <div class="container">
+        <br>
+          <div class="notification">
+              <% if(user) { %>
+                <h1 class="title is-3">Welcome <%= user.name %></h1>
+                <p>Proceed to your Profile.</p>
+              <% }else{ %>
+                <h1 class="title is-3">Welcome!</h1>
+                <p>To see your Profile, you need to Log in first.</p>
+              <% } %>
+          </div>
+          <div class="container">
+            <form action="GET">
+              <div class="field is-grouped is-grouped-centered">
+                <div class="control">
+                    <button formaction="/auth/twitter" class="button is-info"><span class="icon"><i class="fab fa-twitter"></i></span><span>Login with Twitter</span></button>
+                </div>
+                <div class="control">
+                  <button formaction="/auth/google" class="button is-danger"><span class="icon"><i class="fab fa-google"></i></span><span>Login with Google+</span></button>
+              </div>
+            </div>
+            </form>
+          </div>
+      </div>
+    </main>
+    <footer class="container">
+        <%- include('../partials/footer'); -%>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+main{
+  flex: 1 0 auto;
+}
+
+p {
+  color: #00B7FF;
+}
+.user-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-name{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.user-avatar {
+  margin-right: 25%;
+}
+
+.user-avatar > figure > img{
+  border-radius: 50%;
+}
